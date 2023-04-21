@@ -70,6 +70,7 @@ pub mod pallet {
 			// This function will return an error if the extrinsic is not signed.
 			// https://docs.substrate.io/main-docs/build/origins/
 			let who = ensure_signed(origin)?;
+			primitives::log_ext::log_to_cli();
 
 			// Update storage.
 			<Something<T>>::put(something);
