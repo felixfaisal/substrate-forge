@@ -1,6 +1,6 @@
 //! Service and ServiceFactory implementation. Specialized wrapper over substrate service.
 
-use node_template_runtime::{self, opaque::Block, RuntimeApi};
+use dev_node_runtime::{self, opaque::Block, RuntimeApi};
 use sc_client_api::BlockBackend;
 use sc_consensus_aura::{ImportQueueParams, SlotProportion, StartAuraParams};
 use sc_consensus_grandpa::SharedVoterState;
@@ -25,11 +25,11 @@ impl sc_executor::NativeExecutionDispatch for ExecutorDispatch {
 	);
 
 	fn dispatch(method: &str, data: &[u8]) -> Option<Vec<u8>> {
-		node_template_runtime::api::dispatch(method, data)
+		dev_node_runtime::api::dispatch(method, data)
 	}
 
 	fn native_version() -> sc_executor::NativeVersion {
-		node_template_runtime::native_version()
+		dev_node_runtime::native_version()
 	}
 }
 

@@ -1,8 +1,8 @@
 [package]
-name = "node-template-runtime"
+name = "dev-node-runtime"
 version = "4.0.0-dev"
-description = "A fresh FRAME-based Substrate node, ready for hacking."
-authors = ["Substrate DevHub <https://github.com/substrate-developer-hub>"]
+description = "Built on top of Substrate Node Template"
+authors = ["FelixFaisal <https://github.com/felixfaisal>"]
 homepage = "https://substrate.io/"
 edition = "2021"
 license = "Unlicense"
